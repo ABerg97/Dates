@@ -5,13 +5,18 @@
 def main():
 
     date = input('Enter date in form of mm/dd/yyyy')
+    datefinal = convert(date)
+
+    print (datefinal)
+
+def convert(date):
     month = date[0:2]
     day = date[3:5]
     year = date [6:]
-
     transmonth = translate(month)
-
-    print (transmonth, day, sep= ',', year)
+    dateconvert = transmonth + ' ' + day + ','+ ' ' + year
+    dateconvert = str(dateconvert)
+    return dateconvert
 
 def translate(month):
     if month == '01':
